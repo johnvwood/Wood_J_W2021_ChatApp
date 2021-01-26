@@ -1,23 +1,17 @@
 {
-  "name": "wood_j_w2021_chatapp",
-  "version": "1.0.0",
-  "description": "Chat app",
+  "name": "wood-j-w2021-chatapp",
+  "version": "0.0.0",
+  "description": "Node build",
   "main": "app.js",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "nm": "nodemon app",
+    "bs": "browser-sync start --proxy 'localhost:5050' --files 'index.html' 'public'",
+    "start-dev": "concurrently \"browser-sync start --proxy 'localhost:5050' --files '*.html' 'public'\" \"nodemon app\" --kill-others",
+    "start": "node app"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/johnvwood/Wood_J_W2021_ChatApp.git"
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "express": "~4.16.1"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/johnvwood/Wood_J_W2021_ChatApp/issues"
-  },
-  "homepage": "https://github.com/johnvwood/Wood_J_W2021_ChatApp#readme"
+  "author": "johnvwood"
 }
