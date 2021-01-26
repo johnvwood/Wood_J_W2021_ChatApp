@@ -1,0 +1,23 @@
+{
+  "name": "wood_j_w2021_chatapp",
+  "version": "1.0.0",
+  "description": "Chat app",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnvwood/Wood_J_W2021_ChatApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnvwood/Wood_J_W2021_ChatApp/issues"
+  },
+  "homepage": "https://github.com/johnvwood/Wood_J_W2021_ChatApp#readme"
+}
