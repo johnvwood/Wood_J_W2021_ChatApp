@@ -1,0 +1,13 @@
+// iPad width
+@media(min-width: 768px ){
+    html{
+        background-color: green;
+    }
+}
+
+// Desktop width
+@media(min-width: 1200px ){
+    html{
+        background-color: red;
+    }
+}

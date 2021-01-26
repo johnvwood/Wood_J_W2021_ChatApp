@@ -1,0 +1,17 @@
+{
+  "name": "wood-j-w2021-chatapp",
+  "version": "0.0.0",
+  "description": "Node build",
+  "main": "app.js",
+  "scripts": {
+    "nm": "nodemon app",
+    "bs": "browser-sync start --proxy 'localhost:5050' --files 'index.html' 'public'",
+    "start-dev": "concurrently \"browser-sync start --proxy 'localhost:5050' --files '*.html' 'public'\" \"nodemon app\" --kill-others",
+    "start": "node app"
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "express": "~4.16.1"
+  },
+  "author": "johnvwood"
+}

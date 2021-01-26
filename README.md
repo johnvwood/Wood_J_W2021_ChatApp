@@ -1,2 +1,3 @@
-# Wood_J_W2021_ChatApp
-Chat Application
+# Chat Application
+This is a basic chat application.
+ 
