@@ -17,13 +17,16 @@ app.get("/chat", (req, res) => {
   res.sendFile(path.join(__dirname, "chat.html"));
 });
 
-app.listen(port, () => {
-  console.log(`app is running on ${port}`);
+const server = app.listen(port, () => {
+  console.log(`App is running on port ${port}`);
 });
 
+// Switchboard op
 messenger.attach(server);
+
+// socket is the single connection
 messenger.on('connection', (socket) => {
-  console.log(`a user connected: ${socket.id}`);
+  console.log(`A user connected: ${socket.id}`);
 
   socket.emit('connected', { sID: `${socket.id}`, message: 'new connection'})
 
@@ -32,6 +35,6 @@ messenger.on('connection', (socket) => {
   });
   
   socket.on('disconnect', () => {
-    console.log('a user disconnected')
+    console.log('A user disconnected');
   });
 });

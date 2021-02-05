@@ -6,7 +6,7 @@
   "scripts": {
     "nm": "nodemon app",
     "bs": "browser-sync start --proxy 'localhost:5050' --files 'index.html' 'public'",
-    "start-dev": "concurrently \"browser-sync start --proxy 'localhost:5050' --files '*.html' 'public'\" \"nodemon app\" --kill-others",
+    "start-dev": "concurrently \"browser-sync start --proxy 'localhost:5050' --files 'index.html' 'public'\" \"nodemon app\" --kill-others",
     "start": "node app"
   },
   "dependencies": {

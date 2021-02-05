@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Page</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="###">
 </head>
 <body>
+
     <main id="app">
+        <h1 class="hidden"> Chat App - Chat Page</h1>
         <h2>Where the messages will show</h2>
         <section class="messageBox">
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea class="textArea"></textarea>
             <input type="submit" value="send">
         </section>
     </main>
+
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script defer src="scripts/main.js"></script>
-    
+
 </body>
 </html>

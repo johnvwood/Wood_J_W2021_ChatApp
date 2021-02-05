@@ -1,26 +1,27 @@
-(() => {
-    console.log('fired');
+console.log('main.js init');
 
-    const socket = io();
 
-    function setUserID({sID, message}) {
-        debugger;
+// from socket.io site
 
-        vm.socketID = sID
-    }
+var socket = io();
 
-    const vm = new Vue({
-        data: {
-            messages: [],
-            nickname: "",
-            username: "",
-            socketID: ""
-        },
-        
-        methods: {
+// function setUserID({sID, message}) {
+//     debugger;
 
-        }
-    }).$mount("#app");
+//     vm.socketID = sID
+// }
 
-    socket.addEventListener("connected", setUserID)
-});
+// const vm = new Vue({
+//     data: {
+//         messages: [],
+//         nickname: "",
+//         username: "",
+//         socketID: ""
+//     },
+    
+//     methods: {
+
+//     }
+// }).$mount("#app");
+
+// socket.addEventListener("connected", setUserID)
