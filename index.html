@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat App Name</title>
+    <title>Chat App</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="###">
 </head>
 <body>
-    <h1 class="hidden">Chat App Header 1, Hidden</h1>
-    <h3>Enter username to join chat</h3>
 
-    <input type="text" placeholder="Username">
-    <input type="password" placeholder="Password">
+    <main id="app">
+        <h1 class="hidden">Chat App - Home Page</h1>
+        <h2>Enter username to join chat</h2>
+
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+
+        <input type="submit" value="Join">
+
+        <!-- test link to bypass login -->
+        <a href="/chat">Chat Page Link</a>
+    </main>
+
     
-    <input type="submit" value="Join">
-
-    <a href="/chat">Chat Page Link</a>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer src="scripts/main.js"></script>
 </body>
-
-<script src="/socket.io/socket.io.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-<script defer src="scripts/main.js"></script>
-
 </html>

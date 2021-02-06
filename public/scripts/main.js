@@ -1,26 +1,46 @@
-(() => {
-    console.log('fired');
+import chatMessage from "./components/msg.js"
 
-    const socket = io();
+console.log('main.js loaded');
 
-    function setUserID({sID, message}) {
-        debugger;
+const socket = io();
 
-        vm.socketID = sID
-    }
+function setUserID({sID, message}) {
+    vm.socketID = sID;
+}
 
-    const vm = new Vue({
-        data: {
-            messages: [],
-            nickname: "",
-            username: "",
-            socketID: ""
-        },
-        
-        methods: {
+function appendMessage(message) {
+    vm.messages.push(message);
+}
 
+const vm = new Vue({
+    // Libraries
+    data: {
+        messages: [],
+        nickname: "",
+        username: "",
+        socketid: "",
+        message: ""
+    },
+    
+    methods: {
+        dispatchMessage() {
+            socket.emit("chatMessage", {content: this.message, name: this.nickname || "Anonymous"});
+            //Resets message text to nothing when chat is send
+            this.message = "";
         }
-    }).$mount("#app");
+    },
 
-    socket.addEventListener("connected", setUserID)
-});
+    components: {
+        //first var is html tag
+        newmessage: chatMessage
+    },
+
+    // Lifecycle functions
+    // created: function() {
+    //     console.log("Vue created");
+    // }
+
+}).$mount("#app");
+
+socket.addEventListener("connected", setUserID);
+socket.addEventListener("message", appendMessage);
