@@ -17,7 +17,7 @@
         <h1 class="hidden">Chat App - Home Page</h1>
         <h2>Enter a username below</h2>
 
-        <form class="usernameForm" @submit.prevent="setUsername">
+        <form class="usernameForm" @submit.prevent="setUsername" action="chat">
             <input type="text" placeholder="Username" v-model:value="username">
             <input type="submit" value="Start Chatting">
         </form>
