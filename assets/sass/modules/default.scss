@@ -1,11 +1,15 @@
 html {
-    background-color: black;
+    background-color: rgb(33, 33, 36);
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
+.hidden {
+    display:none
+}
+
 .nav {
-    background-color: rgb(36, 22, 87);
+    background-color: rgb(56, 63, 77);
     width: 100%;
     height: 50px;
     display: flex;
@@ -27,35 +31,39 @@ main {
     }
 }
 
-.hidden {
-    display:none
+.messagesBox{
+    height: 70vh;
+    overflow-y: scroll;
+    padding-right:4px;
+    padding-top:20px;
+    padding-left: 14px;
+    box-sizing: border-box;
+    background-color: rgb(24, 24, 26);
 }
 
 #messages {
     display: flex;
-    margin-bottom: 6px;
-}
-
-.messageRow {
-    overflow: auto;
-    word-wrap: break-word;
-    max-width: 40%;
-    background-color: pink;
-}
-
-.newMessage {
-    background-color: darkmagenta;
-    border-radius: 10px;
-    padding: 10px;
-    h3 {
-        font-weight: bold;
-        margin-bottom:6px;
+    flex-direction: column;
+    margin-bottom: 8px;
+    .baseMessage {
+        max-width: 300px;
+        min-width: 100px;
+        padding: 10px;
+        h3 {
+            font-weight: bold;
+            margin-bottom:6px;
+        }
     }
-}
-
-.myMessage {
-    background-color: darkgreen;
-    float: right;
+    .newMessage {
+        background-color: darkmagenta;
+        border-radius: 10px 10px 10px 0px;
+        align-self: flex-start;
+    }
+    .myMessage {
+        background-color: darkgreen;
+        border-radius: 10px 10px 0px 10px;
+        align-self: flex-end;
+    }
 }
 
 .messageBoxForm {
@@ -73,4 +81,3 @@ main {
         width: 20%;
     }
 }
-

@@ -3,15 +3,16 @@ export default {
 
     template:
     `
-    <section class="newMessage" :class="{ 'myMessage' : matchedID }">
+    <section class="baseMessage" :class="{ 'myMessage animate__animated animate__backInRight' : matchedID, 'newMessage  animate__animated animate__backInLeft' : !matchedID }">
         <h3>{{msg.message.name}}:</h3>
         <p>{{msg.message.content}}</p>
     </section>
     `,
 
-    data: function () {
+    data() {
         return {
             matchedID: this.socketid == this.msg.id
         }
     }
+
 }
